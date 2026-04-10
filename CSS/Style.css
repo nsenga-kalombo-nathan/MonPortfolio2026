@@ -227,6 +227,9 @@ footer a:hover {
     transform: translate(-3px);
 }
 
+
+/* CODE Projet CSS */
+
 :root { 
             --primary-color: #6366f1; 
             --text-dark: #1f2937; 
@@ -234,22 +237,26 @@ footer a:hover {
             --bg-light: #f9fafb; 
             --white: #ffffff; 
         } 
-         
 section h1 { 
-    padding-top: 3%; 
+    padding: 60px 0 20px;
     color: var(--violet-doux); 
-    font-size: 1.6rem; 
+    font-size: 30px; 
     font-weight: 700; 
     position: relative; 
     text-align: center; 
 } 
  
-.underline { 
-    width: 60px; 
-    height: 3px; 
-    background: var(--primary-color); 
-    margin: 1.1rem auto; 
-} 
+
+section h1::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+  }
+
  
 .projects-grid { 
     display: grid; 
@@ -349,7 +356,9 @@ footer {
     margin: 0 10px; 
 } 
 
- 
+
+/* CODE Contact CSS */
+
 .contact-container { 
     max-width: 900px; 
     margin: 5rem auto; 
@@ -463,6 +472,201 @@ f
 lex-direction: column; 
 } 
 }
+
+
+.passions-card { 
+    background: var(--white); 
+    border-radius: 0 20px 40px 40px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+    transition: transform 0.3s ease; 
+    text-align: left; 
+    display: flex; 
+    flex-direction: column; 
+    margin-top: 4%;
+    margin-left: 9%;
+    margin-right: 9%;
+} 
+ 
+.passions-card:hover { 
+    transform: translateY(-5px); 
+        } 
+ 
+.card-image { 
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover;
+    border-bottom: 4px solid var(--primary-color); 
+} 
+ 
+.card-content { 
+    padding: 24px; 
+    flex-grow: 1; 
+} 
+ 
+.card-content h3 { 
+    margin: 0 0 10px 0; 
+    color: var(--primary-color); 
+    font-size: 1.2rem; 
+} 
+ 
+.card-content p { 
+    font-size: 0.9rem; 
+    color: var(--text-light); 
+    line-height: 1.5; 
+    margin-bottom: 15px; 
+} 
+ 
+.tags { 
+    display: flex; 
+    gap: 8px; 
+    margin-bottom: 20px; 
+} 
+ 
+.tag { 
+    background: #eef2ff; 
+    color: var(--primary-color); 
+    padding: 4px 12px; 
+    border-radius: 20px; 
+    font-size: 0.75rem; 
+    font-weight: 600; 
+} 
+
+/* CODE CSS Divertissement */
+
+.entertainment {
+    padding: 80px 20px;
+    background-color: #f8fafc; /* Gris clair très doux (base) */
+    border-radius: 30px;
+}
+
+section h2 { 
+    padding: 40px 0 20px;
+    color: var(--violet-doux); 
+    font-size: 30px; 
+    font-weight: 700; 
+    position: relative; 
+    text-align: center; 
+} 
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: var(--violet-doux);
+    margin: 1.2rem auto;
+    border-radius: 2px;
+  }
+
+/* GRILLE 2x2 */
+.entertainment-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* STYLE DES CASES */
+.entertainment-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #ffffff; /* Blanc pour le contraste */
+    border: 1px solid #e2e8f0; /* Bordure gris clair */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+.entertainment {
+    padding: 80px 20px;
+    background-color: #f8fafc; /* Gris clair très doux (base) */
+    border-radius: 30px;
+}
+
+.underline {
+    width: 60px;
+    height: 4px;
+    /* Dégradé mélangeant tes couleurs : Violet, Orange et Rouge */
+    background: linear-gradient(to right, #a78bfa, #fb923c, #f87171);
+    margin: 0 auto 50px;
+    border-radius: 10px;
+}
+
+/* GRILLE 2x2 */
+.entertainment-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* STYLE DES CASES */
+.entertainment-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    background: #ffffff; /* Blanc pour le contraste */
+    border: 1px solid #e2e8f0; /* Bordure gris clair */
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+}
+
+/* ICÔNES (Violet Doux par défaut) */
+.entertainment-card i {
+    font-size: 2rem;
+    color: #a78bfa; /* Violet doux */
+    min-width: 50px;
+    text-align: center;
+    transition: 0.3s;
+}
+
+/* TEXTES */
+.entertainment-card h3 {
+    color: #1e293b;
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.entertainment-card p {
+    color: #64748b;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* EFFET AU SURVOL (Fusion des couleurs) */
+.entertainment-card:hover {
+    transform: translateY(-10px);
+    border-color: #fb923c; /* Bordure devient Orange doux */
+    
+    /* Glow interne avec un mélange de rouge et violet très léger */
+    box-shadow: 0 20px 40px rgba(167, 139, 250, 0.1), 
+                0 10px 20px rgba(248, 113, 113, 0.05);
+}
+
+/* Animation de l'icône au survol (Passe à l'Orange puis Rouge) */
+.entertainment-card:hover i {
+    color: #fb923c; /* Orange doux au début du hover */
+    animation: colorShift 1s infinite alternate;
+}
+
+@keyframes colorShift {
+    from { color: #fb923c; } /* Orange */
+    to { color: #f87171; }   /* Rouge doux */
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .entertainment-list {
+        grid-template-columns: 1fr;
+    }
+}
+
  
 
 
